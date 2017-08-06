@@ -1,0 +1,28 @@
+service: roxettebot
+
+# frameworkVersion: "=X.X.X"
+
+provider:
+  name: aws
+  runtime: nodejs6.10
+
+#  stage: dev
+  region: eu-west-1
+
+  environment: ${file(env.yml)}
+
+functions:
+  test:
+    handler: handler.test
+    events:
+      - http:
+          path: test
+          method: get
+
+  tweet:
+    handler: handler.tweet
+    events:
+      - schedule: rate(60 minutes)
+
+# plugins:
+#   - serverless-plugin-optimize

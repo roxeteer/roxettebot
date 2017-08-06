@@ -1,0 +1,16 @@
+{
+  "name": "roxettebot",
+  "version": "1.0.0",
+  "description": "Roxette lyrics Twitter bot",
+  "main": "handler.js",
+  "author": "Visa Kopu, visa.kopu@roxeteer.com",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "^4.3.0",
+    "serverless": "^1.19.0",
+    "serverless-plugin-optimize": "^3.0.3-rc.1"
+  },
+  "dependencies": {
+    "twit": "^2.2.9"
+  }
+}
